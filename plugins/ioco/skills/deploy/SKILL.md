@@ -23,7 +23,8 @@ Deploy the app to Railway. Target: $ARGUMENTS (default: production)
 10. Watch the deployment until it succeeds or fails. On failure, fetch the build/deploy logs and diagnose before retrying.
 
 ## Verify
-11. Hit `GET /health` (or the main page) on the live URL.
+11. Hit `GET /api/health/deep` (or the main page) on the live URL and confirm `status` is `ok`.
 12. Check recent logs for errors.
 13. If verification fails, offer to roll back to the deployment from step 7 (redeploy/rollback in Railway), and wait for the user's go-ahead.
-14. Report: what was deployed (commit), URL, the rollback target, and anything that looks off.
+14. If this was the first production deploy, remind Jeff to add the app to `iocodigital/site-monitor` (`sites.json`).
+15. Report: what was deployed (commit), URL, the rollback target, and anything that looks off.

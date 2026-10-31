@@ -10,7 +10,7 @@ Build the feature described in: $ARGUMENTS
 3. **Database.** Update `db/schema.ts`, generate a migration with drizzle-kit, apply it.
 4. **API.** Add validators (Zod), service logic, then routes. Shared types go in `packages/shared` if this is a monorepo.
 5. **UI.** Add a `features/<name>/` folder with components, hooks (TanStack Query), and API calls. Handle loading, error, and empty states.
-6. **Verify.** Run typecheck and tests. Fix failures. Start the app if possible and confirm the feature works.
+6. **Verify.** Add tests per the `testing` skill. Run typecheck and tests. Fix failures. Start the app if possible and confirm the feature works.
 7. **Wrap up.** Summarize what changed in 3–5 bullets and suggest a commit message. Don't commit unless asked.
 
 Keep the change focused on this feature. Note unrelated issues instead of fixing them.

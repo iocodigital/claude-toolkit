@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 Run a pre-launch audit. Context from the user: $ARGUMENTS
 
-Read SPEC.md first. Skip sections that don't apply (no accounts → skip account flows; internal tool → skip SEO) and say which you skipped.
+Read SPEC.md first. If the project type is **Prototype**, stop and say the launch check is for projects with real users; offer to switch the spec to a full project type first. Skip sections that don't apply (no accounts → skip account flows; internal tool → skip SEO) and say which you skipped.
 
 Check each item by looking at the code, config, or live URL. Don't fix anything yet. Report a table: item, status (✅ done / ⚠️ partial / ❌ missing / n/a), and a one-line fix.
 
@@ -16,7 +16,7 @@ Check each item by looking at the code, config, or live URL. Don't fix anything 
 - `npm audit --omit=dev` clean of high/critical issues.
 - No secrets in git history (`git log -p` grep for key-like strings; suggest rotating any found).
 - Database backups enabled, and a restore has been tested at least once (ask the user).
-- Error tracking (Sentry or similar) and uptime monitoring on `/health` are set up.
+- Error tracking (Sentry or similar) is set up, and the app is in `iocodigital/site-monitor`'s `sites.json` (homepage, `/api/health/deep`, CORS if split origins, an auth-guard check). The Railway healthcheck path is set to `/api/health`.
 - Spend limits and billing alerts on Railway and any AI/API providers (ask the user).
 
 ## Accounts (if the app has users)

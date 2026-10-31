@@ -11,6 +11,13 @@ These are default conventions. If the project or request doesn't fit them, say s
 - **Use Next.js instead** only if the project needs SEO/public pages or Jeff asks for it. Then skip the separate backend.
 - **Full-stack:** monorepo with `apps/api`, `apps/web`, `packages/shared`.
 
+## Prototype projects
+If SPEC.md marks the project as a **Prototype** (throwaway, one-off, no real users' personal data):
+- Pick the simplest thing that works. A single Vite app, a single Hono server, or one Next.js app; SQLite, a JSON file, or no database is fine. No monorepo.
+- Skip: the walking skeleton ceremony, Sentry, rate limiting beyond AI endpoints, `/ioco:launch-check`, and tests beyond one smoke test.
+- Still required: secrets out of the repo, model keys server-side, spend limits on any paid API.
+- If a prototype starts getting real users or storing personal data, say so and suggest switching it to a full project type.
+
 ## Scale to the project
 - Small project: start lean (routes, services, db). Add folders only when needed. No empty folders.
 - Larger app: group by feature (`modules/<feature>/`) instead of one giant folder per layer.
@@ -50,4 +57,4 @@ src/
 - Root `package.json` scripts: `typecheck`, `lint`, `test`, `build` (CI runs these). In a monorepo they fan out to each workspace.
 
 ## Walking skeleton (first build in a new project)
-Frontend → API → DB → deployed on Railway, end to end, before any features. Include from day one: env validation, error handler, request logging, `/health`, auth middleware (default-deny), CORS, secure headers. See the `security-baseline` skill.
+Frontend → API → DB → deployed on Railway, end to end, before any features. Include from day one: env validation, error handler, request logging, `/api/health` + `/api/health/deep`, auth middleware (default-deny), CORS, secure headers. See the `security-baseline` skill.

@@ -9,7 +9,7 @@
     {
       "name": "ioco",
       "source": "./plugins/ioco",
-      "description": "Jeff's dev toolkit: architecture conventions, security baseline, UI design rules, AI-feature rules, feature/endpoint/deploy/launch-check skills, and a code reviewer."
+      "description": "Jeff's dev toolkit: spec interview, architecture conventions, security baseline, UI design rules, AI-feature rules, testing, feature/endpoint/deploy/launch-check skills, a code reviewer, and a secret-scanning commit hook."
     }
   ]
 }
