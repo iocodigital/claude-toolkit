@@ -1,6 +1,10 @@
 {
   "name": "iocodigital",
-  "owner": { "name": "Jeff Chernenko", "email": "jeff@iocodigital.com" },
+  "owner": {
+    "name": "Jeff Chernenko",
+    "email": "jeff@iocodigital.com"
+  },
+  "description": "Jeff Chernenko's Claude Code plugins for building and shipping side projects.",
   "plugins": [
     {
       "name": "ioco",
