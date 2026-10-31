@@ -6,7 +6,9 @@ description: Jeff's UI and visual design rules for avoiding the generic "vibe-co
 ## Start with a direction
 Before building UI for a new project, propose a short design direction based on SPEC.md and confirm it with Jeff:
 - palette (one brand color plus neutrals), type pairing, corner radius, density, tone of voice.
-Record the agreed direction in SPEC.md under a "Design" heading and follow it everywhere.
+Record the agreed direction in SPEC.md under a "Design" heading and follow it everywhere. (The `/ioco:spec` interview covers this for new projects.)
+
+For a **Prototype**, keep the direction to a sentence or two (one brand color, one font, one tone). The rules below still apply; they're cheap.
 
 ## Rules
 - **Customize shadcn.** Set the project's own colors, radius, and font in the theme tokens on day one. Never ship the default zinc/slate look untouched.
