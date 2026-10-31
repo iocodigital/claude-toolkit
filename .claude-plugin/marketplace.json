@@ -1,0 +1,11 @@
+{
+  "name": "iocodigital",
+  "owner": { "name": "Jeff Chernenko", "email": "jeff@iocodigital.com" },
+  "plugins": [
+    {
+      "name": "ioco",
+      "source": "./plugins/ioco",
+      "description": "Jeff's dev toolkit: architecture conventions, security baseline, UI design rules, AI-feature rules, feature/endpoint/deploy/launch-check skills, and a code reviewer."
+    }
+  ]
+}

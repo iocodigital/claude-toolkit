@@ -1,0 +1,6 @@
+{
+  "name": "ioco",
+  "description": "Jeff's dev toolkit: architecture conventions, security baseline, UI design rules, AI-feature rules, feature/endpoint/deploy/launch-check skills, and a code reviewer.",
+  "version": "1.0.0",
+  "author": { "name": "Jeff Chernenko" }
+}
